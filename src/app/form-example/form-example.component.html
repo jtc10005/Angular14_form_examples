@@ -1,13 +1,19 @@
-<mat-card>
-  <mat-card-header> Typed Form </mat-card-header>
-  <mat-card-content>
-    <app-manual-typed-form></app-manual-typed-form>
-  </mat-card-content>
-</mat-card>
-<mat-card>
-  <mat-card-header> FormBuilder Form </mat-card-header>
-  <mat-card-content>
-    <app-form-buider-typed-form></app-form-buider-typed-form>
-  </mat-card-content>
-</mat-card>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> Typed Form </mat-panel-title>
+    <mat-panel-description>
+      A form manually created in the back end
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-manual-typed-form></app-manual-typed-form>
+</mat-expansion-panel>
 
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title> FormBuilder Form </mat-panel-title>
+    <mat-panel-description>
+      A form created in the back end by FormBuilder
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <app-form-buider-typed-form></app-form-buider-typed-form>
+</mat-expansion-panel>
