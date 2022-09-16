@@ -1,0 +1,39 @@
+<div [formGroup]="login">
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input matInput type="email" formControlName="email" />
+  </mat-form-field>
+  <br/>
+  <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input
+      matInput
+      type="password"
+      formControlName="password"
+      placeholder="password"
+    />
+  </mat-form-field>password disabled?' {{ login.get('password')?.disabled }}
+  <br/>
+  <button mat-raised-button color="primary"
+    (click)="
+      login.get('password')?.disabled
+        ? login.get('password')?.enable()
+        : login.get('password')?.disable()
+    "
+  >
+    Disable password control
+  </button>
+  <br />
+  <i>
+    form.value
+    <pre>
+  {{ login.value | json }}
+</pre
+    >
+    form.getRawValue()
+    <pre>
+  {{ login.getRawValue() | json }}
+</pre
+    >
+  </i>
+</div>
