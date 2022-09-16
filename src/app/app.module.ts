@@ -9,10 +9,17 @@ import { MaterialExampleModule } from '../material.module';
 import { AppComponent } from './app.component';
 import { FormBuiderTypedFormComponent } from './form-example/form-buider-typed-form/form-buider-typed-form.component';
 import { FormExampleComponent } from './form-example/form-example.component';
+import { TemplateFormComponent } from './form-example/template-form/template-form.component';
 import { ManualTypedFormComponent } from './form-example/manual-typed-form/manual-typed-form.component';
 
 @NgModule({
-  declarations: [FormExampleComponent, FormBuiderTypedFormComponent, ManualTypedFormComponent, AppComponent],
+  declarations: [
+    FormExampleComponent,
+    FormBuiderTypedFormComponent,
+    ManualTypedFormComponent,
+    AppComponent,
+    TemplateFormComponent,
+  ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,

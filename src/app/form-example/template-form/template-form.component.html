@@ -1,0 +1,49 @@
+<form #login="ngForm">
+  <mat-form-field appearance="outline">
+    <mat-label>email</mat-label>
+    <input
+      matInput
+      type="email"
+      [(ngModel)]="model.email"
+      name="email"
+      #email="ngModel"
+    />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="outline">
+    <mat-label>password</mat-label>
+    <input
+      matInput
+      type="password"
+      [(ngModel)]="model.password"
+      name="password"
+      #password="ngModel"
+    />
+  </mat-form-field>
+  password disabled?' {{ password.disabled }}
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="
+      password.disabled
+        ? login.form.get('password')?.enable()
+        : login.form.get('password')?.disable()
+    "
+  >
+    Disable password control
+  </button>
+  <br />
+  <i>
+    form.value
+    <pre
+      >{{ login.value | json }}
+</pre
+    >
+    form.getRawValue()
+    <!-- <pre>
+{{ login.getRawValue() | json }}
+</pre -->
+    >
+  </i>
+</form>
